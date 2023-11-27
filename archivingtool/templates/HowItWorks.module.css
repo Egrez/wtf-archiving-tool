@@ -1,139 +1,92 @@
 .howItWorks {
   color: #c5221f;
-  font-size: 22px;
+  font-size: 40px;
   font-weight: bold;
   font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   letter-spacing: 5px;
   text-transform: uppercase;
-  position: absolute;
-  left: 838px;
-  top: 1032px;
-  width: min-content;
-  height: min-content;
   text-align: center;
   align-items: center;
-  white-space: nowrap;
-  flex-direction: column;
 }
-.archive {
-  color: #000;
-  font-size: 80.206px;
-  font-weight: bold;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 549px;
-  top: 2545px;
-  width: min-content;
-  height: min-content;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
-  flex-direction: column;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  height: 450px;
 }
-.loremIpsumDolorSitAmetConsecte {
-  color: #000;
-  font-size: 22px;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 306px;
-  top: 2648px;
-  width: 564px;
-  height: 50px;
-  text-align: end;
+
+.container > div {
+  display: flex;
   align-items: end;
-  flex-direction: column;
-}
-.upload1 {
-  position: absolute;
-  left: 1020px;
-  top: 2287px;
-  width: 700px;
-  height: 700px;
-  background-image:/* webpackIgnore: true */ url('assets/upload1.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.loremIpsumDolorSitAmetConsecte2 {
-  color: #000;
-  font-size: 22px;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 1052px;
-  top: 2028px;
-  width: 554px;
-  height: 50px;
-  flex-direction: column;
-}
-.process {
-  color: #000;
-  font-size: 80.206px;
-  font-weight: bold;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 1046px;
-  top: 1922px;
-  width: min-content;
-  height: min-content;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
-  flex-direction: column;
-}
-.processing1 {
-  position: absolute;
-  left: 195px;
-  top: 1650px;
-  width: 700px;
-  height: 700px;
-  background-image:/* webpackIgnore: true */ url('assets/processing1.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.search {
-  color: #000;
-  font-size: 80.206px;
-  font-weight: bold;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 582px;
-  top: 1305px;
-  width: min-content;
-  height: min-content;
-  text-align: center;
-  align-items: center;
-  white-space: nowrap;
-  flex-direction: column;
-}
-.loremIpsumDolorSitAmetConsecte3 {
-  color: #000;
-  font-size: 22px;
-  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 291px;
-  top: 1408px;
-  width: 578px;
-  height: 50px;
+  justify-content: end;
   text-align: end;
-  align-items: end;
+  font-size: 2rem;
+  color: rgb(31, 5, 0);
+}
+
+.container > div:nth-child(2) {
+  border: 0px solid rgb(103, 230, 230);
+  border-radius: 50px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-items: start;
+  justify-content: start;
+}
+
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  height: 450px;
+}
+
+.container2 > div {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  font-size: 2rem;
+  color: rgb(31, 5, 0);
+}
+
+.container2 > div:nth-child(2) {
+  border: 0px solid rgb(103, 230, 230);
+  border-radius: 50px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerHeader {
+  color: #000;
+  font-size: 80.206px;
+  padding: 50px;
+  font-weight: bold;
+  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    text-align:start;
+    align-items: start;
+    justify-content: start;
   flex-direction: column;
 }
-.informationTab1 {
-  position: absolute;
-  left: 52.5%;
-  right: 11.0417%;
-  top: 20.1327%;
-  bottom: 66.5972%;
-  background-image:/* webpackIgnore: true */ url('assets/informationTab1.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.containerText {
+  color: #000;
+  padding: 50px;
+  font-size: 22px;
+  font-family: Open Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  flex-direction: column;
+}
+
+.image {
+  overflow:visible;
+}
+.image img {
+  height: 110%;
 }
