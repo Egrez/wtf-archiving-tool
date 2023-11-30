@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 5vi;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  color: rgb(5, 5, 116);
+  padding-left: 20px;
+  width: 100px;
+}
+
+.hamburger {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.nav__link {
+  position: fixed;
+  width: 150px;
+  margin: 0 auto;
+  top: 4rem;
+  right: 2rem;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+
+.nav__link a {
+  display: block;
+  text-align: right;
+  padding: 15px 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.upper {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav__link a:hover {
+  color: lightcoral;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    right: 0;
+    margin-right: 20px;
+    background: none;
+    border-width: 0px;
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
