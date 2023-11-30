@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 * {
   box-sizing: border-box;
@@ -6,13 +6,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 0 5vi;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
   color: black;
-
 }
 
 /* nav styles */
@@ -40,7 +39,7 @@ a {
   width: 150px;
   margin: 0 auto;
   top: 4rem;
-  right: 2rem;
+  right: 1rem;
   border-width: 1px;
   border-radius: 10px;
   border-color: lightgray;
@@ -67,6 +66,12 @@ a {
 }
 
 @media screen and (min-width: 600px) {
+  body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+    width: 85%;
+  }
+
   .nav__link {
     display: block;
     position: static;
