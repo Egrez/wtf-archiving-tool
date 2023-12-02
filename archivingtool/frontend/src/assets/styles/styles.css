@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+:root {
+  --wtf-red: #c23d18;
+  --wtf-red-dark: #af3817;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  color: rgb(5, 5, 116);
+  padding-left: 20px;
+  width: 100px;
+}
+
+.hamburger {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.nav__link {
+  float: right;
+  position: fixed;
+  width: 150px;
+  margin: 0 auto;
+  top: 4rem;
+  right: 1rem;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+
+.nav__link li a{
+  display: block;
+  text-align: right;
+  padding: 15px 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.upper {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav__link li a:hover {
+  color: var(--wtf-red);
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    right: 0;
+    margin-right: 20px;
+    background: none;
+    border-width: 0px;
+  }
+
+  .nav__link li {
+    float: left;
+    padding: 15px 10px;
+  }
+
+  ul.nav__link li a {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  .upper {
+    border: 0;
+  }
+
+  #signup {
+    background-color: var(--wtf-red);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+  }
+
+  #signup:hover {
+    background-color: var(--wtf-red-dark);
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
