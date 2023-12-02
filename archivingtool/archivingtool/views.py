@@ -15,7 +15,7 @@ def home(request):
 		form = PostUrlForm(data=request.POST)
 
 		if form.is_valid():
-			url = form.cleaned_data['url']
+			url = form.cleaned_data['url'].strip()
 			if "facebook" in url:
 				scraped_data =facebook_scraper.scrape(url)
 			elif "tiktok" in url:
