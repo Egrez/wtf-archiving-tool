@@ -2,27 +2,43 @@ from TikTokApi import TikTokApi
 import asyncio
 import os
 
+import json
+
 ms_token = os.environ.get(
     "ms_token", None
 )  # set your own ms_token, think it might need to have visited a profile
 
 
-async def get_video_example(video_url):
+async def scrape(video_url):
     async with TikTokApi() as api:
         await api.create_sessions(ms_tokens=[ms_token], num_sessions=1, sleep_after=3)
-        video = api.video(url= video_url)
+        video = api.video(url=video_url)
 
         video_info = await video.info()  # is HTML request, so avoid using this too much
-        print(video_info.get('author').get('uniqueId'))
-        print(video_info.get('author').get('verified')) 
-        print(video_info.get('desc'))
-        print(video_info.get('music').get('title'))
-        print(video_info.get('stats').get('shareCount')) 
-        print(video_info.get('stats').get('playCount'))  
-        print(video_info.get('locationCreated')) 
+
+        return {
+            "Link to Disinformative Content" : video_url,
+            "Summary" : video_info.get("desc"),
+            "Date Posted" : video_info.get("createTime"),
+            "Likes" : video_info.get("stats").get("diggCount"),
+            "Comments" : video_info.get("stats").get("commentCount"),
+            "Shares" : video_info.get("stats").get("shareCount"),
+            "Account Name" : video_info.get('author').get('nickname'),
+            "Account URL" :  "https://www.tiktok.com/@grprm._" + video_info.get('author').get('uniqueId'),
+            "Status of the Post" : video_info.get("available"),
+            "Account Verification" : video_info.get('author').get('verified'),
+        }
+        
+        # print(video_info.get('author').get('uniqueId'))
+        # print(video_info.get('author').get('verified')) 
+        # print(video_info.get('desc'))
+        # print(video_info.get('music').get('title'))
+        # print(video_info.get('stats').get('shareCount')) 
+        # print(video_info.get('stats').get('playCount'))  
+        # print(video_info.get('locationCreated')) 
         # print(video_info.keys())
 
 
 
-# if __name__ == "_main_":
-    # asyncio.run(get_video_example('https://www.tiktok.com/@grprm._/video/7277556717066456321'))
+# if __name__ == "__main__":
+#     asyncio.run(tiktok_scraper('https://www.tiktok.com/@grprm._/video/7277556717066456321'))

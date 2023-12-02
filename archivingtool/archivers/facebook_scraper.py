@@ -1,6 +1,6 @@
 import facebook_scraper as fs
 
-def download(link):
+def scrape(link):
     """
     Download comments for a public Facebook post.
     """
@@ -24,3 +24,5 @@ def download(link):
         "Account URL" : post.get("user_url"),
         "Status of the Post" : post.get("available"),
     }
+
+# https://facebook.com/story.php?story_fbid=2257188721032235&id=119240841493711

@@ -1,6 +1,6 @@
 import os, json, yt_dlp
 
-def scraper(video_url):
+def scrape(video_url):
     # Set up yt_dlp options
     ydl_opts = {
         'quiet': True,
@@ -35,12 +35,12 @@ def scraper(video_url):
             return None
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
     
-#     video_url = 'https://www.youtube.com/watch?v=B5wCziuqnwk'
+    video_url = 'https://www.youtube.com/watch?v=B5wCziuqnwk'
 
-#     scraped_data = scraper(video_url)
+    scraped_data = scrape(video_url)
 
-#     if scraped_data:
-#         # Print the scraped data
-#         print(json.dumps(scraped_data, indent=2))
+    if scraped_data:
+        # Print the scraped data
+        print(json.dumps(scraped_data, indent=2))
