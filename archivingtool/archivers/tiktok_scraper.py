@@ -1,8 +1,10 @@
+# https://github.com/davidteather/tiktok-api
 from TikTokApi import TikTokApi
 import asyncio
 import os
 
 import json
+from datetime import datetime
 
 ms_token = os.environ.get(
     "ms_token", None
@@ -16,17 +18,26 @@ async def scrape(video_url):
 
         video_info = await video.info()  # is HTML request, so avoid using this too much
 
+        verified = "Unverified"
+        if video_info.get('author').get('verified'):
+            verified = "Verified"
+
         return {
             "Link to Disinformative Content" : video_url,
+            'Date of Submission' : datetime.now().strftime('%d %b %Y'),
             "Summary" : video_info.get("desc"),
-            "Date Posted" : video_info.get("createTime"),
+            "Date Posted" : datetime.fromtimestamp(int(video_info.get("createTime"))).strftime('%d %b %Y'),
             "Likes" : video_info.get("stats").get("diggCount"),
-            "Comments" : video_info.get("stats").get("commentCount"),
-            "Shares" : video_info.get("stats").get("shareCount"),
+            "Views" : video_info.get('stats').get('playCount'),
+            "Comments" : video_info.get("stats").get("commentCount"), # not included
+            "Shares" : video_info.get("stats").get("shareCount"), # not included
             "Account Name" : video_info.get('author').get('nickname'),
-            "Account URL" :  "https://www.tiktok.com/@grprm._" + video_info.get('author').get('uniqueId'),
+            "Account URL" :  "https://www.tiktok.com/@grprm._" + video_info.get('author').get('uniqueId'), # not included
             "Status of the Post" : video_info.get("available"),
-            "Account Verification" : video_info.get('author').get('verified'),
+            "Account Verification" : verified,
+            "Platform" : "TikTok",
+            "Format" : "Video",
+            "Primary Country" : video_info.get('locationCreated'),
         }
         
         # print(video_info.get('author').get('uniqueId'))
@@ -40,5 +51,5 @@ async def scrape(video_url):
 
 
 
-# if __name__ == "__main__":
-#     asyncio.run(tiktok_scraper('https://www.tiktok.com/@grprm._/video/7277556717066456321'))
+if __name__ == "__main__":
+    print(asyncio.run(scrape('https://www.tiktok.com/@grprm._/video/7277556717066456321')))
