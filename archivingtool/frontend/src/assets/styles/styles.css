@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
+:root {
+  --wtf-red: #c23d18;
+  --wtf-red-dark: #af3817;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -35,6 +40,7 @@ a {
 }
 
 .nav__link {
+  float: right;
   position: fixed;
   width: 150px;
   margin: 0 auto;
@@ -45,10 +51,10 @@ a {
   border-color: lightgray;
 }
 
-.nav__link a {
+.nav__link li a{
   display: block;
   text-align: right;
-  padding: 15px 10px;
+  padding: 15px 20px;
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -57,8 +63,8 @@ a {
   border-bottom: 1px solid lightgray;
 }
 
-.nav__link a:hover {
-  color: lightcoral;
+.nav__link li a:hover {
+  color: var(--wtf-red);
 }
 
 .hide {
@@ -70,7 +76,6 @@ a {
     font-family: "Open Sans", sans-serif;
     margin: 0 auto;
     width: 85%;
-    align-items: center;
   }
 
   .nav__link {
@@ -83,12 +88,31 @@ a {
     border-width: 0px;
   }
 
-  .nav__link a {
-    display: inline-block;
+  .nav__link li {
+    float: left;
     padding: 15px 20px;
-    border: 0;
+  }
+
+  ul.nav__link li a {
+    display: block;
     font-size: 0.75rem;
     font-weight: bold;
+  }
+
+  .upper {
+    border: 0;
+  }
+
+  #signup {
+    background-color: var(--wtf-red);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+  }
+
+  #signup:hover {
+    background-color: var(--wtf-red-dark);
   }
 
   .hamburger {
