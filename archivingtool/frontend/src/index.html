@@ -7,29 +7,46 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/2df56e85ef.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2df56e85ef.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <a href="/" >
-          <img src="./assets/images/wtf-icon.png" class="logo"/>
-        </a>
+    <nav>
+      <a href="/">
+        <img src="./assets/images/wtf-icon.png" class="nav__logo" />
+      </a>
 
-        <div class="hamburger">
-            <i class="fa-solid fa-bars fa-lg"></i>
-        </div>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </div>
 
-        <ul class="nav__link hide">
-            <li><a href="#" class="upper">Home</a></li>
-            <li><a href="#" class="upper">About</a></li>
-            <li><a href="#" class="upper">Log in</a></li>
-            <li><a href="#" id="signup">Sign up</a></li>
-          </ul>          
-      </nav>
-    </header>
+      <ul class="nav__link hide">
+        <li><a href="#" class="upper">Home</a></li>
+        <li><a href="#" class="upper">About</a></li>
+        <li><a href="#" class="upper">Log in</a></li>
+        <li><a href="#" id="signup">Sign up</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <div class="logo">
+        <h1>WHAT THE FAKE!</h1>
+        <h2>The Fact Checker's Archiving Tool</h2>
+      </div>
+      <div class="submission">
+        <form>
+          <input
+            type="text"
+            class="user-input"
+            placeholder="Enter disinformation post URL here"
+          />
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </section>
   </body>
-
   <script src="./scripts/script.js"></script>
 </html>

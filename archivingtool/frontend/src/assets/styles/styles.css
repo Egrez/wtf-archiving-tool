@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Ranchers");
 
 :root {
   --wtf-red: #c23d18;
   --wtf-red-dark: #af3817;
+  --wtf-blue: #4297fb;
+  --wtf-blue-dark: #3a85db;
 }
 
 * {
@@ -21,14 +24,14 @@ a {
 
 /* nav styles */
 
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
 }
 
-.logo {
+.nav__logo {
   color: rgb(5, 5, 116);
   padding-left: 20px;
   width: 100px;
@@ -49,9 +52,10 @@ a {
   border-width: 1px;
   border-radius: 10px;
   border-color: lightgray;
+  background-color: white;
 }
 
-.nav__link li a{
+.nav__link li a {
   display: block;
   text-align: right;
   padding: 15px 20px;
@@ -69,6 +73,68 @@ a {
 
 .hide {
   display: none;
+}
+
+/* main */
+
+.main {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem auto 3rem;
+}
+
+.main .logo {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.main h1 {
+  font-family: "Ranchers", sans-serif;
+  letter-spacing: 5px;
+  font-size: 4em;
+  line-height: 1em;
+  color: var(--wtf-red);
+}
+
+.main h2 {
+  font-weight: bold;
+  margin: 1rem auto 3rem;
+}
+
+/* main-submission */
+
+.submission {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.user-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.user-input::placeholder {
+  color: lightgray;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--wtf-blue);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.submit-button:hover {
+  background-color: var(--wtf-blue-dark);
 }
 
 @media screen and (min-width: 600px) {
@@ -90,7 +156,8 @@ a {
 
   .nav__link li {
     float: left;
-    padding: 15px 10px;
+    padding: 15px 0px 15px 10px;
+    margin: 5px 0px 5px 5px;
   }
 
   ul.nav__link li a {
@@ -108,7 +175,7 @@ a {
     color: white;
     border-radius: 10px;
     padding: 10px 15px;
-    margin: 5px;
+    margin: 5px 0px 5px 5px;
   }
 
   #signup:hover {
@@ -117,5 +184,17 @@ a {
 
   .hamburger {
     display: none;
+  }
+
+  /* main */
+  .main h1 {
+    font-family: "Ranchers", sans-serif;
+    letter-spacing: 5px;
+    font-size: 6em;
+    line-height: 1em;
+  }
+
+  .user-input {
+    width: 400px;
   }
 }
