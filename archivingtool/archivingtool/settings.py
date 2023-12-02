@@ -131,3 +131,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if DEBUG:
+    BASE_URL = "http://localhost:8000/"
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+else:
+    BASE_URL = ""
