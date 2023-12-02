@@ -10,6 +10,7 @@
 
 * {
   box-sizing: border-box;
+  color: #525252;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 /* nav styles */
@@ -90,7 +90,7 @@ nav {
   padding: 0 30px;
 }
 
-.main h1 {
+.logo h1 {
   font-family: "Ranchers", sans-serif;
   letter-spacing: 5px;
   font-size: 4em;
@@ -98,8 +98,9 @@ nav {
   color: var(--wtf-red);
 }
 
-.main h2 {
+.logo h2 {
   font-weight: bold;
+  font-size: 1em;
   margin: 1rem auto 3rem;
 }
 
@@ -137,7 +138,41 @@ nav {
   background-color: var(--wtf-blue-dark);
 }
 
-@media screen and (min-width: 600px) {
+/* main-description */
+.main-description h2 {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 1rem auto 0.5rem;
+}
+
+.main-description p {
+  font-size: 1em;
+  margin: 0 2em 5rem;
+}
+
+/* platforms */
+.platforms h1 {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 1rem auto 0.5rem;
+}
+
+.platforms ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.platforms li img{
+  margin: 20px;
+  width: 150px;
+}
+
+#x {
+  width: 35px;
+}
+
+@media screen and (min-width: 635px) {
   body {
     font-family: "Open Sans", sans-serif;
     margin: 0 auto;
@@ -162,7 +197,7 @@ nav {
 
   ul.nav__link li a {
     display: block;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 
@@ -187,7 +222,7 @@ nav {
   }
 
   /* main */
-  .main h1 {
+  .logo h1 {
     font-family: "Ranchers", sans-serif;
     letter-spacing: 5px;
     font-size: 6em;
@@ -196,5 +231,10 @@ nav {
 
   .user-input {
     width: 400px;
+  }
+
+  /* main-description */
+  .main-description p {
+    font-size: 1em;
   }
 }
