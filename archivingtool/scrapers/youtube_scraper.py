@@ -31,7 +31,7 @@ def scrape(video_url):
                 'Account URL': info.get('uploader_url'),    # not included
                 'Status of the Post': info.get('availability'), 
                 'Account Verification': verified,
-                "Platform" : "Facebook",
+                "Platform" : "YouTube",
                 "Format" : "Video",
                 'Topic': " ".join(info.get('categories')),
                 'Sub-topic': " ".join(info.get('tags')),
