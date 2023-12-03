@@ -6,7 +6,7 @@ from .forms import PostUrlForm
 
 import asyncio
 
-from archivers import facebook_scraper, tiktok_scraper, youtube_scraper
+from scrapers import facebook_scraper, tiktok_scraper, youtube_scraper
 
 import google.oauth2.credentials
 from googleapiclient.discovery import build
