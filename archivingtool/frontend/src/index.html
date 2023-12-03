@@ -7,29 +7,73 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/2df56e85ef.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2df56e85ef.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <a href="/" >
-          <img src="./assets/images/wtf-icon.png" class="logo"/>
-        </a>
+    <nav>
+      <!-- nav logo -->
+      <a href="/">
+        <img src="./assets/images/wtf-icon.png" class="nav__logo" />
+      </a>
 
-        <div class="hamburger">
-            <i class="fa-solid fa-bars fa-lg"></i>
-        </div>
+      <!-- mobile menu -->
+      <div class="hamburger">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </div>
 
-        <ul class="nav__link hide">
-            <li><a href="#" class="upper">Home</a></li>
-            <li><a href="#" class="upper">About</a></li>
-            <li><a href="#" class="upper">Log in</a></li>
-            <li><a href="#" id="signup">Sign up</a></li>
-          </ul>          
-      </nav>
-    </header>
+      <!-- menu -->
+      <ul class="nav__link hide">
+        <li><a href="#" class="upper">Home</a></li>
+        <li><a href="#" class="upper">About</a></li>
+        <li><a href="#" class="upper">Log in</a></li>
+        <li><a href="#" id="signup">Sign up</a></li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <!-- main logo -->
+      <div class="logo">
+        <h1>WHAT THE FAKE!</h1>
+        <h2>The Fact Checker's Archiving Tool</h2>
+      </div>
+
+      <!-- input submission -->
+      <div class="submission">
+        <form>
+          <input
+            type="text"
+            class="user-input"
+            placeholder="Enter disinformation post URL here"
+          />
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+
+      <!-- main description -->
+      <div class="main-description">
+        <h2 id="main-desc-h2">Want to archive a fake news post? Submit it to our website!</h2>
+        <p>
+          By entering the URL to our submission bar, you can contribute to our disinformation posts archive.
+        </p>
+      </div>
+
+      <!-- supported platforms -->
+      <div class="platforms">
+        <h1>Supported platforms</h1>
+        <ul>
+            <li><img id="ig" src="assets/images/ig-logo.png"/></li>
+            <li><img id="fb" src="assets/images/fb-logo.png"/></li>
+            <li><img id="tt" src="assets/images/tiktok-logo.png"/></li>
+            <li><img id="yt" src="assets/images/youtube-logo.png"/></li>
+            <li><img id="x" src="assets/images/x-logo.png"/></li>
+        </ul>
+      </div>
+
+    </section>
   </body>
-
   <script src="./scripts/script.js"></script>
 </html>
