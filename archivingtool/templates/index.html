@@ -15,12 +15,10 @@
 
 	<!-- input submission -->
 	<div class="submission">
-		<form>
-			<input
-				type="text"
-				class="user-input"
-				placeholder="Enter disinformation post URL here"
-			/>
+		<form action="" method="POST">
+			{% csrf_token %}
+
+			{{ form.url }}
 			<button type="submit" class="submit-button">Submit</button>
 		</form>
 	</div>
@@ -37,11 +35,11 @@
 	<div class="platforms">
 		<h1>Supported platforms</h1>
 		<ul>
-				<li><img id="ig" src="{% static 'assets/images/ig-logo.png' %}"/></li>
+				<!-- <li><img id="ig" src="{% static 'assets/images/ig-logo.png' %}"/></li> -->
 				<li><img id="fb" src="{% static 'assets/images/fb-logo.png' %}"/></li>
 				<li><img id="tt" src="{% static 'assets/images/tiktok-logo.png' %}"/></li>
 				<li><img id="yt" src="{% static 'assets/images/youtube-logo.png' %}"/></li>
-				<li><img id="x" src="{% static 'assets/images/x-logo.png' %}"/></li>
+				<!-- <li><img id="x" src="{% static 'assets/images/x-logo.png' %}"/></li> -->
 		</ul>
 	</div>
 
@@ -87,6 +85,6 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="./scripts/script.js"></script>
+<script src="{% static 'scripts/script.js' %}"></script>
 {% endblock %}
 
