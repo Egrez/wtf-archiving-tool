@@ -43,7 +43,7 @@ pycparser==2.21
 pycryptodomex==3.19.0
 pyee==11.0.1
 pyparsing==3.1.1
-pyppeteer==1.0.2
+pyppeteer==0.0.25
 pyquery==2.0.0
 PySocks==1.7.1
 python-dateutil==2.8.2
